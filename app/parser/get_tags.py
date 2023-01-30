@@ -16,6 +16,6 @@ def get_tags(url: str):
         raise ValueError('Can not parse the url')
 
     resp = req.get(normalize_url(url))
-    soup = BeautifulSoup(resp.text, 'html')
+    soup = BeautifulSoup(resp.text, 'html.parser')
 
     return [(lambda tag: tag.name)(tag) for tag in soup.recursiveChildGenerator() if tag.name]
