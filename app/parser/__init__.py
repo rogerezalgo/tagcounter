@@ -1,1 +1,1 @@
-
+from .parse_and_return_byte_dict import parse_and_return_byte_dict as parse
